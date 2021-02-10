@@ -1,4 +1,13 @@
-<%= render "layouts/error", model:@book %>
-<%= render "layouts/user_info", user:@user %>
-<%= render "layouts/new_book", book:@book %>
-<%= render "books/index", books:@books %>
+<div class="container">
+  <%= render "layouts/error", model:@book %>
+  <div class="row">
+    <div class="col-md-3">
+      <%= render "layouts/user_info", user:@user %>
+      <%= render "layouts/new_book", book:@book %>
+    </div>
+    <div class="col-md-8 offset-md-1">
+      <%= render "books/index", books:@books %>
+    </div>
+  </div>
+</div>
+
