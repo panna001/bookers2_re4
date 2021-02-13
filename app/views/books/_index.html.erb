@@ -18,9 +18,10 @@
         <td><%= link_to book.title, book_path(book) %></td>
         <td><%= book.body %></td>
         <%= render "books/favorite", book:book %>
-        <td>
-          <%= "コメント数：#{book.book_comments.count}" %>
-        </td>
+        <td><%= "コメント数：#{book.book_comments.count}" %></td>
+        <td><%= "フォロー数：#{book.user.relationships.count}"%></td>
+        <td><%= "フォロー数：#{book.user.reverse_relationships.count}"%></td>
+
       </tr>
     <% end %>
   </tbody>
